@@ -1,0 +1,150 @@
+header {
+    background: $header-bg;
+    position: relative;
+    z-index: 999;
+    -webkit-box-shadow: 0px -17px 15px 19px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px -17px 15px 19px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px -17px 15px 19px rgba(0, 0, 0, 0.15);
+    @media(min-width: 1200px) {
+        height: 90px;
+    }
+    nav {
+        margin-top: 1.1em;
+        .menu {
+            margin-top: -1em;
+            list-style-type: none;
+            margin: 0 0 -0.8em -1em;
+            text-align: center;
+            display: none;
+            @media(min-width: 1000px) {
+                margin-left: calc(50% - 8em);
+                display: block;
+                width: 55%;
+                margin-top: -4em;
+            }
+            @media(min-width: 1200px) {
+                width: 55%;
+                margin-top: -4em;
+                margin-left: 30em;
+            }
+            li {
+                font-weight: 700;
+                padding-bottom: 1em;
+                border-bottom: 1px solid $btn-color;
+                padding: 1em 0;
+                @media(min-width: 450px) {
+                    padding: 0 10px;
+                    font-size: 11px;
+                    border-bottom: none;
+                    color: #020202;
+                    display: inline-block;
+                }
+                @media(min-width: 1200px) {
+                    font-size: 14px;
+                }
+                &:hover {
+                    color: $btn-color;
+                    transition: 500ms;
+                    cursor: pointer;
+                }
+            }
+             :first-child {
+                border-top: 1px solid $btn-color;
+                @media(min-width: 600px) {
+                    border-top: none;
+                }
+            }
+             :last-child {
+                border-bottom: none;
+            }
+        }
+        .functions-btns {
+            margin-top: 0.4em;
+            float: right;
+            margin-right: -1.1em;
+            position: relative;
+            z-index: 999;
+            display: inline-flex;
+            justify-content: flex-end;
+            @media(min-width: 1200px) {
+                margin-right: 0.4em;
+            }
+            li {
+                display: inline-block;
+                margin-right: 1em;
+                .hamburger,
+                .magnifier {
+                    width: 23px;
+                    &:hover {
+                        transition: 300ms;
+                        cursor: pointer;
+                        fill: $btn-color;
+                    }
+                }
+            }
+        }
+        .search-input {
+            display: none;
+            .search {
+                border: none;
+                border-bottom: 1px solid #f1f1f1;
+                float: right;
+                margin: 0.5em calc(50% - 7em);
+                width: 200px;
+                @media(min-width: 550px) {
+                    margin: 0.8em -5.5em;
+                }
+                @media(min-width: 650px) {
+                    margin: 0.8em -7.5em;
+                }
+                @media(min-width: 750px) {
+                    margin: 0.8em -9.5em;
+                }
+                @media(min-width: 850px) {
+                    margin: 0.8em -10.5em;
+                }
+                @media(min-width: 990px) {
+                    margin: 0.8em -15.5em;
+                }
+                @media(min-width: 1000px) {
+                    margin: 0.8em -13.5em;
+                }
+                @media(min-width: 1100px) {
+                    margin: 0.8em -15.5em;
+                }
+                @media(min-width: 1200px) {
+                    margin: 1.1em;
+                }
+                &::placeholder {
+                    color: #f1f1f1;
+                }
+            }
+            .search-visible {
+                display: inline;
+            }
+        }
+    }
+}
+
+.logo {
+    background-image: url('../images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    float: left;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    background-color: $header-bg;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.35);
+    transition: 0.4s;
+    display: inline-block;
+    @media(min-width: 900px) {
+        height: 90px;
+    }
+}

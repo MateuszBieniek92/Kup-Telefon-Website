@@ -1,0 +1,28 @@
+.section-two {
+    background: white;
+    .mobile-producents {
+        list-style-type: none;
+        display: block;
+        @media(min-width: 768px) {
+            display: inline-flex;
+            flex-wrap: wrap;
+        }
+        @media(min-width: 1200px) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        li {
+            padding: 0;
+            margin-left: calc(50% - 6em);
+            @media(min-width: 768px) {
+                margin-right: 0em;
+                margin-left: 2.5em;
+            }
+            @media(min-width: 1200px) {
+                margin-right: 5em;
+                margin-left: -3em;
+            }
+           
+        }
+    }
+}

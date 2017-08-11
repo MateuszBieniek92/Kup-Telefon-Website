@@ -1,0 +1,196 @@
+.section-three {
+    .lists {
+        background: $lists-color;
+        list-style-type: none;
+        text-align: left;
+        padding: 0;
+        margin-bottom: 0;
+        @media(min-width: 768px) {
+            height: 75px;
+        }
+        li {
+            display: inline-block;
+            font-weight: 700;
+            height: 100%;
+            padding: 2em 2.65em;
+            .triangle {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 11px 8px 11px;
+                border-color: transparent transparent #ffffff transparent;
+                margin: 0px calc(50% - 12px);
+                position: relative;
+                bottom: -28px;
+                display: none;
+                @media(min-width: 768px) {
+                    bottom: -19px;
+                }
+            }
+        }
+        li:hover {
+            background: $btn-color;
+            cursor: pointer;
+            color: white;
+            transition: 500ms;
+            .triangle {
+                display: block;
+            }
+        }
+    }
+    
+    .mobile-phone {
+        position: relative;
+        //        z-index: 900;
+        background: rgb(244, 244, 244);
+        background: -moz-linear-gradient(45deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background: -webkit-linear-gradient(45deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background: linear-gradient(45deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        padding: 2em;
+        .mobile-image {
+            background-image: url('../images/telefon.png ');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 110px;
+            height: 210px;
+            margin: 4em calc(50% - 55px);
+        }
+        p {
+            text-align: center;
+            font-weight: 700;
+        }
+        .mobile-header {
+            margin-top: 1em;
+            font-size: 16px;
+        }
+        .mobile-price {
+            font-size: 20px;
+            margin-bottom: 1em;
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+    .products-btn {
+        text-align: center;
+        border: none;
+        color: white;
+        background: $btn-color;
+        font-weight: 700;
+        width: 250px;
+        height: 50px;
+        margin-bottom: 5em;
+        margin-top: 4em;
+        margin-left: calc(50% - 125px);
+        &:hover {
+            transform: scale(1.2, 1.2);
+            transition: 500ms;
+        }
+    }
+}
+
+.green-panel {
+    max-height: 0px;
+    background: rgba(25, 214, 24, 0.95);
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+    height: 550px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    p {
+        display: none;
+        color: white;
+    }
+    .green-header {
+        margin-top: 2.7em;
+        font-size: 16px;
+    }
+    .green-info {
+        margin-top: 5em;
+    }
+    .green-price {
+        margin-top: 7.1em;
+        font-size: 20px;
+    }
+    .cart-btn,
+    .compare-btn {
+        display: none;
+    }
+    .cart-btn {
+        margin-top: 4.5em;
+        border: none;
+        height: 50px;
+        margin-left: 1em;
+        width: 121px;
+        background: black;
+        padding: 1em;
+        @media(min-width: 768px) {
+            width: 90px;
+        }
+        @media(min-width: 1200px) {
+            width: 121px;
+        }
+        .cart {
+            margin-left: 2.3em;
+            background-image: url('../images/icon cart.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            @media(min-width: 768px) {
+                margin-left: 1.5em;
+                margin-top: 0.1em;
+            }
+            @media(min-width: 1200px) {
+                margin-left: 2.3em;
+                margin-top: 0;
+            }
+        }
+        &:hover {
+            transform: scale(1.2, 1.2);
+            transition: 500ms;
+        }
+    }
+    .compare-btn {
+        margin-top: 4.5em;
+        border: none;
+        height: 50px;
+        float: right;
+        margin-right: 1em;
+        width: 121px;
+        background: white;
+        font-weight: 700;
+        @media(min-width: 768px) {
+            width: 90px;
+        }
+        @media(min-width: 1200px) {
+            width: 121px;
+            padding: 1em;
+        }
+        &:hover {
+            transform: scale(1.2, 1.2);
+            transition: 500ms;
+        }
+    }
+}
+
+.mobile-phone:hover {
+    .green-panel {
+        overflow: hidden;
+        max-height: 550px;
+        transition-property: all;
+        transition-duration: 1.5s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        p {
+            display: block;
+            transition: 1.5s;
+        }
+        .cart-btn,
+        .compare-btn {
+            display: inline-block;
+        }
+    }
+}
